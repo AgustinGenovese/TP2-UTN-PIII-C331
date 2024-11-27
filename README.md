@@ -27,13 +27,13 @@ La **Movie API** es una API RESTful para gestionar información sobre **películ
 - **MySQL**
 
 
-# Instrucciones para correr la API localmente
+## Instrucciones para correr la API localmente
 
-# **Requisitos previos:**
+## **Requisitos previos:**
 **1.** Tener Node.js instalado. Si no lo tienes, puedes descargarlo desde https://nodejs.org/
 **2.**Tener MySQL instalado y configurado en tu máquina.
 
-# **Pasos para ejecutar el proyecto:**
+## **Pasos para ejecutar el proyecto:**
 
 **1.** Clonar el repositorio del proyecto:
 
@@ -66,6 +66,6 @@ La **Movie API** es una API RESTful para gestionar información sobre **películ
 **9.** Probar los endpoints de la API:
    Desde la documentación Swagger, podrás probar los diferentes endpoints de la API, como los de películas y autores.
 
-# **Notas:**
-**-** Si encuentras algún error con la conexión a la base de datos, revisa las credenciales y asegúrate de que MySQL esté funcionando correctamente en tu máquina.
+## **Notas:**
+**-** Si encuentras algún error con la conexión a la base de datos, revisa las credenciales y asegúrate de que MySQL esté funcionando correctamente en tu máquina. <br>
 **-** La API permite realizar operaciones CRUD sobre las películas y los autores (crear, leer, actualizar y eliminar).
