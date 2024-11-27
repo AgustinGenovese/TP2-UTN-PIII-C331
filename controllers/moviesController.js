@@ -16,14 +16,45 @@ exports.createMovie = async (req, res) => {
 // Obtener todas las películas
 exports.getAllMovies = async (req, res) => {
     try {
-        const movies = await Movie.findAll({
+        // Desestructuración de parámetros de la query
+        const { page = 1, limit = 2, sort = 'ASC', type, status } = req.query;
+
+        // Convertir `page` y `limit` a enteros
+        const pageNumber = parseInt(page);
+        const limitNumber = parseInt(limit);
+
+        // Definir los parámetros de filtrado, si existen
+        const filterOptions = {};
+        if (type) {
+            filterOptions.type = type; // Filtrar por tipo
+        }
+        if (status) {
+            filterOptions.status = status; // Filtrar por estado
+        }
+
+        // Configuración de paginado y ordenado
+        const options = {
+            where: filterOptions, // Aplicar los filtros
             include: {
                 model: Author,
                 as: "Director", // Incluir el autor (director)
                 attributes: ['name', 'surname'] // Seleccionar los atributos que quieres del autor
-            }
+            },
+            order: [['createdAt', sort.toUpperCase()]], // Ordenar por `createdAt` en orden ascendente o descendente
+            limit: limitNumber, // Limitar el número de registros por página
+            offset: (pageNumber - 1) * limitNumber, // Desplazamiento según la página
+        };
+
+        // Obtener las películas con las opciones de filtrado, ordenado y paginado
+        const { count, rows } = await Movie.findAndCountAll(options);
+
+        // Enviar la respuesta con los datos paginados
+        res.status(200).json({
+            total: count, // Total de registros
+            totalPages: Math.ceil(count / limitNumber), // Total de páginas
+            currentPage: pageNumber, // Página actual
+            movies: rows // Películas en la página actual
         });
-        res.status(200).json(movies);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error al obtener las películas', error });
