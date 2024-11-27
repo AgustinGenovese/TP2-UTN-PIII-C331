@@ -1,20 +1,26 @@
-# Movie API
+# Descripcion Movie API
 La **Movie API** es una API RESTful para gestionar información sobre **películas** y sus **directores**. Permite realizar las siguientes operaciones:
 
 ## **Películas:**
-- **Crear:** Agregar una nueva película a la base de datos.  
-- **Obtener:** Recuperar todas las películas o una específica por **ID**.  
-- **Actualizar:** Modificar los detalles de una película existente.  
-- **Eliminar:** Borrar una película de la base de datos.  
-- **Filtrar:** Buscar películas por tipo y estado.  
-- **Ordenar:** Organizar los resultados por fecha de lanzamiento u otros criterios.  
-- **Paginación:** Limitar los resultados con parámetros **page** y **limit**.
+- **Crear:** Agregar una nueva película a la base de datos. POST /movies
+- **Obtener:** Recuperar todas las películas o una específica por **ID**. GET /movies o GET /movies/{id}
+
+- **Filtrar:** Buscar películas por tipo y estado. Query Parameters: type=movie / status=active 
+
+- **Ordenar:** Organizar los resultados por fecha de lanzamiento u otros criterios. Query Parameters: sort=desc (Ordenar por fecha de creación en orden descendente)
+
+- **Paginación:** Limitar los resultados con parámetros **page** y **limit**. Query Parameters:
+page=1&limit=5 (Paginación para obtener las primeras 5 películas)
+
+- **Actualizar:** Modificar los detalles de una película existente. PUT /movies/{id}
+- **Eliminar:** Borrar una película de la base de datos. DELETE /movies/{id}
+
 
 ## **Autores (Directores):**
-- **Crear:** Agregar un nuevo director al sistema.  
-- **Obtener:** Recuperar todos los autores o uno específico por **ID**.  
-- **Actualizar:** Modificar los detalles de un autor existente.  
-- **Eliminar:** Borrar un autor del sistema.
+- **Crear:** Agregar un nuevo director al sistema. POST /authors 
+- **Obtener:** Recuperar todos los autores o uno específico por **ID**. GET /authors o GET /authors/{id}
+- **Actualizar:** Modificar los detalles de un autor existente. PUT /authors/{id}
+- **Eliminar:** Borrar un autor del sistema. DELETE /authors/{id}
 
 ## **Características:**
 - **Paginación** y **filtrado** de resultados.  
@@ -27,7 +33,7 @@ La **Movie API** es una API RESTful para gestionar información sobre **películ
 - **MySQL**
 
 
-## Instrucciones para correr la API localmente
+# Instrucciones para correr la API localmente
 
 ## **Requisitos previos:**
 **1.** Tener Node.js instalado. Si no lo tienes, puedes descargarlo desde https://nodejs.org/
