@@ -1,0 +1,83 @@
+[
+    {
+      "id": 4,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "releaseDate": "2001-11-10",
+      "genre": "Fantasy",
+      "type": "feature film",
+      "status": "active",
+      "producer": "Warner Bros.",
+      "idDirector": 3,
+      "createdAt": "2024-11-27T15:48:12.000Z",
+      "updatedAt": "2024-11-27T15:04:07.000Z",
+      "Director": {
+        "name": "J.K.",
+        "surname": "Rowling"
+      }
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "releaseDate": "1984-12-01",
+      "genre": "Dystopian",
+      "type": "feature film",
+      "status": "inactive",
+      "producer": "N/A",
+      "idDirector": 4,
+      "createdAt": "2024-11-27T15:48:54.000Z",
+      "updatedAt": "2024-11-27T15:05:06.000Z",
+      "Director": {
+        "name": "George",
+        "surname": "Orwell"
+      }
+    },
+    {
+      "id": 6,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "releaseDate": "2001-12-19",
+      "genre": "Fantasy",
+      "type": "feature film",
+      "status": "active",
+      "producer": "New Line Cinema",
+      "idDirector": 5,
+      "createdAt": "2024-11-27T15:49:14.000Z",
+      "updatedAt": "2024-11-27T15:04:07.000Z",
+      "Director": {
+        "name": "J.R.R.",
+        "surname": "Tolkien"
+      }
+    },
+    {
+      "id": 7,
+      "title": "The Shining",
+      "releaseDate": "1980-05-23",
+      "genre": "Horror",
+      "type": "feature film",
+      "status": "active",
+      "producer": "Warner Bros.",
+      "idDirector": 6,
+      "createdAt": "2024-11-27T15:52:13.000Z",
+      "updatedAt": "2024-11-27T15:04:07.000Z",
+      "Director": {
+        "name": "Stephen",
+        "surname": "King"
+      }
+    },
+    {
+      "id": 10,
+      "title": "The Strange Gift",
+      "releaseDate": "2024-08-20",
+      "genre": "Horror, Psychological Drama",
+      "type": "short film",
+      "status": "active",
+      "producer": "A24 Films",
+      "idDirector": 8,
+      "createdAt": "2024-11-27T17:58:02.000Z",
+      "updatedAt": "2024-11-27T15:02:50.000Z",
+      "Director": {
+        "name": "Ari",
+        "surname": "Aster"
+      }
+    }
+  ]
+  

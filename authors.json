@@ -1,0 +1,37 @@
+[
+    {
+      "id": 3,
+      "name": "J.K.",
+      "surname": "Rowling",
+      "createdAt": "2024-11-27T15:45:58.000Z",
+      "updatedAt": "2024-11-27T15:45:58.000Z"
+    },
+    {
+      "id": 4,
+      "name": "George",
+      "surname": "Orwell",
+      "createdAt": "2024-11-27T15:46:07.000Z",
+      "updatedAt": "2024-11-27T15:46:07.000Z"
+    },
+    {
+      "id": 5,
+      "name": "J.R.R.",
+      "surname": "Tolkien",
+      "createdAt": "2024-11-27T15:46:16.000Z",
+      "updatedAt": "2024-11-27T15:46:16.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Stephen",
+      "surname": "King",
+      "createdAt": "2024-11-27T15:46:23.000Z",
+      "updatedAt": "2024-11-27T15:46:23.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Ari",
+      "surname": "Aster",
+      "createdAt": "2024-11-27T17:57:38.000Z",
+      "updatedAt": "2024-11-27T17:57:38.000Z"
+    }
+  ]

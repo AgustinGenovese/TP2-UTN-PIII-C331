@@ -5,7 +5,7 @@ La **Movie API** es una API RESTful para gestionar información sobre **películ
 - **Crear:** Agregar una nueva película a la base de datos. POST /movies
 - **Obtener:** Recuperar todas las películas o una específica por **ID**. GET /movies o GET /movies/{id}
 
-- **Filtrar:** Buscar películas por tipo y estado. Query Parameters: type=movie / status=active 
+- **Filtrar:** Buscar películas por tipo y estado. Query Parameters: type=feature%20film / status=active 
 
 - **Ordenar:** Organizar los resultados por fecha de lanzamiento u otros criterios. Query Parameters: sort=desc (Ordenar por fecha de creación en orden descendente)
 
@@ -41,11 +41,11 @@ page=1&limit=5 (Paginación para obtener las primeras 5 películas)
 
 ## **Pasos para ejecutar el proyecto:**
 
-**1.** Clonar el repositorio del proyecto:
+**1.** Clonar el repositorio del proyecto.
 
 **2.** Instalar las dependencias del proyecto:
    Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
-   npm install
+   npm install.
 
 **3.** Configurar la base de datos:
    Asegúrate de que MySQL esté corriendo en tu máquina local.
@@ -74,4 +74,3 @@ page=1&limit=5 (Paginación para obtener las primeras 5 películas)
 
 ## **Notas:**
 **-** Si encuentras algún error con la conexión a la base de datos, revisa las credenciales y asegúrate de que MySQL esté funcionando correctamente en tu máquina. <br>
-**-** La API permite realizar operaciones CRUD sobre las películas y los autores (crear, leer, actualizar y eliminar).
