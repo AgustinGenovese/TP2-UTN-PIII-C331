@@ -1,7 +1,6 @@
-// movie.js
 const { DataTypes } = require('sequelize');
 const db = require('../data/database');
-const Author = require('./author');  // Importa Author después de definir el modelo
+const Author = require('./author');  
 
 const Movie = db.define('Movie', {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
@@ -14,7 +13,6 @@ const Movie = db.define('Movie', {
     idDirector: { type: DataTypes.INTEGER, allowNull: false }
 }, { timestamps: true });
 
-// Define la relación inversa después de cargar Author
 Movie.belongsTo(Author, { foreignKey: 'idDirector', targetKey: 'id', as: "Director" });
 
 module.exports = Movie;

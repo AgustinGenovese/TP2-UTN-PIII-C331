@@ -1,6 +1,5 @@
 const Author = require('../models/author');
 
-// Crear un nuevo autor
 exports.createAuthor = async (req, res) => {
     try {
         const { name, surname } = req.body;
@@ -12,7 +11,6 @@ exports.createAuthor = async (req, res) => {
     }
 };
 
-// Obtener todos los autores
 exports.getAllAuthors = async (req, res) => {
     try {
         const authors = await Author.findAll();
@@ -23,7 +21,6 @@ exports.getAllAuthors = async (req, res) => {
     }
 };
 
-// Obtener un autor por su ID
 exports.getAuthorById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -38,7 +35,6 @@ exports.getAuthorById = async (req, res) => {
     }
 };
 
-// Eliminar un autor por su ID
 exports.deleteAuthor = async (req, res) => {
     try {
         const { id } = req.params;

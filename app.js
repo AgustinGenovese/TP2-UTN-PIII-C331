@@ -1,6 +1,8 @@
 // app.js
 const express = require('express');
 const cors = require("cors");
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 
 const db = require('./data/database');
 const moviesRoutes = require('./routes/moviesRoutes');
@@ -10,10 +12,29 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const swaggerOptions = {
+    swaggerDefinition: {
+      info: {
+        title: 'Movie API', 
+        version: '1.0.0',    
+        description: 'API para gestionar películas y autores'
+      },
+      servers: [
+        {
+          url: 'http://localhost:3000',
+        },
+      ],
+    },
+    apis: ['./routes/moviesRoutes.js', './routes/authorsRoutes.js'],
+  };
+  
+const swaggerSpec = swaggerJSDoc(swaggerOptions);
+
 const port = 3000;
 
 app.use('/movies', moviesRoutes);
 app.use('/authors', authorsRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const conexionDB = async () => {
     try { 
@@ -25,11 +46,9 @@ const conexionDB = async () => {
     }
 }
 
-// Asegúrate de importar y establecer relaciones aquí
 const Movie = require('./models/movie');
 const Author = require('./models/author');
 
-// Establece las relaciones después de definir ambos modelos
 Author.hasMany(Movie, { foreignKey: 'idDirector' });
 
 app.listen(port, () => {
